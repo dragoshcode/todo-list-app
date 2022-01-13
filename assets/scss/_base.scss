@@ -1,1 +1,13 @@
 @use "variables" as v;
+
+.todo{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body{
+    background-color: rgb(63, 60, 60);
+}
+

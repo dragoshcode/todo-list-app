@@ -14,7 +14,60 @@
 
 <body>
 
+  <main>
+    <section class="background">
+      <figure>
+        <img src="./assets/images/bg-mobile-light.jpg" alt="background-image"
+          srcset="./assets/images/bg-mobile-light.jpg 500w, ./assets/images/bg-desktop-light.jpg 1920w">
+      </figure>
+    </section>
 
+    <section class="todo flex-column width">
+
+      <header class="flex-column">
+        <div class="todo__title flex">
+          <h1>TODO</h1>
+          <button>
+            <img src="./assets/images/icon-moon.svg" alt="change color theme">
+          </button>      
+        </div>
+        <div class="todo__input">
+          <input type="text" placeholder="Create a new todo">
+        </div>
+      </header>
+
+      <section class="todo__list">
+        <ul class="todo__list-items flex-column">
+
+          <!-- <div class="todo__list-items-item flex">
+            <div class="task flex">
+              <button>
+                <img src="./assets/images/icon-check.svg" alt="task completed">
+              </button>
+              <li>Create a todo app</li>
+            </div>
+            <div class="delete">
+              <button>
+                <img src="./assets/images/icon-delete.svg" alt="delete task">
+              </button>
+            </div>
+          </div> -->
+
+        </ul>
+       
+        <!-- <div class="todo__list-info grid">
+          <p>X items left</p>
+          <div class="buttons flex">
+            <button>All</button>
+            <button>Active</button>
+            <button>Completed</button>
+          </div>
+          <button>Clear Completed</button>
+        </div> -->
+      </section>
+
+    </section>
+  </main>
 
   <script src="assets/js/script.js"></script>
 </body>

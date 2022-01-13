@@ -1,7 +1,7 @@
 node_modules
 package-lock.json
-design
 package.json
 gulpfile.js
 README-template.md
 style-guide.md
+.vscode

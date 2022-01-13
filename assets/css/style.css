@@ -52,6 +52,17 @@ button {
 }
 
 .width {
-  width: 90%;
+  width: 95%;
   margin-inline: auto;
+}
+
+.todo {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background-color: #3f3c3c;
 }
