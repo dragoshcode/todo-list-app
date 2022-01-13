@@ -12,9 +12,16 @@ function addTodo(e) {
   const deleteDiv = document.createElement("div");
   taskDiv.classList.add("task", "flex");
   deleteDiv.classList.add("delete");
-  todoDiv.append(taskDiv, deleteDiv)
-  
-}
+  todoDiv.append(taskDiv, deleteDiv);
 
-// addEventListener("keypress", function(e) {
-//     if (e.key === "Enter") {
+  const taskDivButton = document.createElement("button");
+  const taskDivButtonImage = document.createElement("img");
+  const taskDivLi = document.createElement("li");
+  const deleteDivButton = document.createElement("button");
+  const deleteDivButtonImage = document.createElement("img");
+  taskDiv.append(taskDivButton, taskDivLi);
+  taskDivButton.appendChild(taskDivButtonImage);
+  deleteDiv.appendChild(deleteDivButton);
+  deleteDivButton.appendChild(deleteDivButtonImage);
+
+}
