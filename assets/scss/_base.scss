@@ -12,8 +12,8 @@ body {
   background-color: rgb(63, 60, 60);
 }
 
-.background img{
-    height: 17.5rem;
+.background img {
+  height: 17.5rem;
 }
 
 header {
@@ -42,14 +42,26 @@ header {
   font-weight: 400;
 }
 
-.todo__list{
-    background-color: v.$vr-lt-gy;
+.todo__list {
+  border-radius: 0.5rem;
+  background-color: v.$vr-lt-gy;
 }
 
-// .task{
-//     img{
-//         display: none;
-//     }
-// }
+.todo__list-info {
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "data data data"
+    "state state state";
+  align-items: center;
 
+  .data {
+    grid-area: data;
+    justify-content: space-between;
+  }
 
+  .buttons {
+    grid-area: state;
+    justify-content: center;
+  }
+}

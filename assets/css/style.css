@@ -101,5 +101,21 @@ header {
 }
 
 .todo__list {
+  border-radius: 0.5rem;
   background-color: #fafafa;
+}
+
+.todo__list-info {
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "data data data" "state state state";
+  align-items: center;
+}
+.todo__list-info .data {
+  grid-area: data;
+  justify-content: space-between;
+}
+.todo__list-info .buttons {
+  grid-area: state;
+  justify-content: center;
 }

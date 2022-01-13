@@ -17,6 +17,7 @@ function addTodo(e) {
   const taskDivButton = document.createElement("button");
   const taskDivButtonImage = document.createElement("img");
   const taskDivLi = document.createElement("li");
+  taskDivLi.innerText = "i'm the task";
   const deleteDivButton = document.createElement("button");
   const deleteDivButtonImage = document.createElement("img");
   taskDiv.append(taskDivButton, taskDivLi);
@@ -28,4 +29,6 @@ function addTodo(e) {
   taskDivButtonImage.alt = "task completed";
   deleteDivButtonImage.src = "./assets/images/icon-delete.svg";
   deleteDivButtonImage.alt = "delete task";
+
+  todoList.appendChild(todoDiv);
 }
