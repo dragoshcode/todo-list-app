@@ -24,4 +24,8 @@ function addTodo(e) {
   deleteDiv.appendChild(deleteDivButton);
   deleteDivButton.appendChild(deleteDivButtonImage);
 
+  taskDivButtonImage.src = "./assets/images/icon-check.svg";
+  taskDivButtonImage.alt = "task completed";
+  deleteDivButtonImage.src = "./assets/images/icon-delete.svg";
+  deleteDivButtonImage.alt = "delete task";
 }
