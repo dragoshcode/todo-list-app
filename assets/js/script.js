@@ -7,7 +7,7 @@ todoInput.addEventListener("keypress", (e) => {
 
 function addTodo(e) {
   const todoDiv = document.createElement("div");
-  todoDiv.classList.add("todo__list-items-item");
+  todoDiv.classList.add("todo__list-items-item", "flex");
   const taskDiv = document.createElement("div");
   const deleteDiv = document.createElement("div");
   taskDiv.classList.add("task", "flex");
@@ -17,7 +17,7 @@ function addTodo(e) {
   const taskDivButton = document.createElement("button");
   const taskDivButtonImage = document.createElement("img");
   const taskDivLi = document.createElement("li");
-  taskDivLi.innerText = "i'm the task";
+  taskDivLi.innerText = "Complete the task";
   const deleteDivButton = document.createElement("button");
   const deleteDivButtonImage = document.createElement("img");
   taskDiv.append(taskDivButton, taskDivLi);
