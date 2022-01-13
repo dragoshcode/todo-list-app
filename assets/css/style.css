@@ -37,6 +37,10 @@ button {
   cursor: pointer;
 }
 
+input {
+  border: none;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -58,11 +62,44 @@ button {
 
 .todo {
   position: absolute;
-  top: 20%;
+  top: 22%;
   left: 50%;
   transform: translate(-50%, -50%);
+  gap: 2rem;
 }
 
 body {
   background-color: #3f3c3c;
+}
+
+.background img {
+  height: 17.5rem;
+}
+
+header {
+  gap: 3rem;
+}
+
+.todo__title {
+  justify-content: space-between;
+}
+.todo__title h1 {
+  color: #fafafa;
+  font-size: 2.5rem;
+  letter-spacing: 1.2rem;
+}
+.todo__title img {
+  width: 2rem;
+}
+
+.todo__input input {
+  width: 100%;
+  padding: 1.5rem 5rem;
+  border-radius: 0.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.todo__list {
+  background-color: #fafafa;
 }
