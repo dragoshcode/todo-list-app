@@ -2,7 +2,7 @@
 
 .todo {
   position: absolute;
-  top: 20%;
+  top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 13rem;
@@ -10,11 +10,20 @@
 }
 
 .background img {
-  height: 20rem;
+  height: 24rem;
+  clip-path: polygon(
+    50% 0%,
+    100% 0%,
+    100% 83.8%,
+    80% 100%,
+    20.4% 100%,
+    0% 84.3%,
+    0% 0%
+  );
 }
 
 header {
-  gap: 2.3em;
+  gap: 3rem;
 }
 
 .todo__title {
@@ -44,6 +53,7 @@ header {
 
   &-items {
     background-color: v.$vr-lt-gy;
+    border-radius: 0.5rem 0.5rem 0 0;
   }
 
   &-items-item {
@@ -70,7 +80,8 @@ header {
   color: v.$vr-dk-gyish-blue;
   max-width: 20rem;
   line-height: 1.4;
-  margin-top: .3rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
 }
 
 .delete button img {
@@ -86,6 +97,8 @@ header {
   align-items: center;
   gap: 2rem;
   margin-bottom: 3rem;
+  display: none;
+  border-radius: 0.5rem;
 
   .data {
     grid-area: data;
@@ -94,6 +107,7 @@ header {
     background-color: v.$vr-lt-gy;
 
     box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
 
     p {
       font-size: 1.15rem;
@@ -114,6 +128,7 @@ header {
     background-color: v.$vr-lt-gy;
     padding-block: 1.5rem;
     box-shadow: 0px -3px 25px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
 
     button {
       color: v.$dk-gyish-bl;
@@ -121,5 +136,28 @@ header {
       font-size: 1.3rem;
       font-weight: 700;
     }
+  }
+}
+
+.floating-text {
+  justify-content: center;
+
+  p {
+    color: v.$vr-dk-gyish-blue;
+    font-size: 1.8rem;
+    margin-top: 20rem;
+    animation: floating-text 4s infinite ease;
+  }
+}
+
+@keyframes floating-text {
+  0% {
+    transform: translateY(0.8rem);
+  }
+  50% {
+    transform: translateY(-0.8rem);
+  }
+  100% {
+    transform: translateY(0.8rem);
   }
 }

@@ -1,5 +1,7 @@
 const todoInput = document.querySelector(".todo-input");
 const todoList = document.querySelector(".todo__list-items");
+const bottomInfo = document.querySelector(".todo__list-info");
+const floatingText = document.querySelector(".floating-text");
 
 todoInput.addEventListener("keypress", (e) => {
   e.key === "Enter" && addTodo();
@@ -18,7 +20,7 @@ function addTodo(e) {
   const taskDivButtonImage = document.createElement("img");
   const taskDivLi = document.createElement("li");
   if (todoInput.value.length === 0) {
-    todoDiv.style.display = "none";
+    todoDiv.removeChild(taskDivLi);
   }
   taskDivLi.innerText = todoInput.value;
   todoInput.value = "";
@@ -26,6 +28,11 @@ function addTodo(e) {
   const deleteDivButton = document.createElement("button");
   const deleteDivButtonImage = document.createElement("img");
   taskDiv.append(taskDivButton, taskDivLi);
+  if (taskDiv.hasChildNodes()) {
+    bottomInfo.style.display = "grid";
+    floatingText.style.display = "none";
+  }
+
   taskDivButton.appendChild(taskDivButtonImage);
   deleteDiv.appendChild(deleteDivButton);
   deleteDivButton.appendChild(deleteDivButtonImage);
@@ -39,5 +46,9 @@ function addTodo(e) {
 
   deleteDivButton.addEventListener("click", () => {
     todoDiv.remove();
+    if (!todoList.hasChildNodes()) {
+      bottomInfo.style.display = "none";
+      floatingText.style.display = "flex";
+    }
   });
 }
