@@ -17,8 +17,12 @@ function addTodo(e) {
   const taskDivButton = document.createElement("button");
   const taskDivButtonImage = document.createElement("img");
   const taskDivLi = document.createElement("li");
+  if (todoInput.value.length === 0) {
+    todoDiv.style.display = "none";
+  }
   taskDivLi.innerText = todoInput.value;
   todoInput.value = "";
+
   const deleteDivButton = document.createElement("button");
   const deleteDivButtonImage = document.createElement("img");
   taskDiv.append(taskDivButton, taskDivLi);
@@ -33,5 +37,7 @@ function addTodo(e) {
 
   todoList.appendChild(todoDiv);
 
-  
+  deleteDivButton.addEventListener("click", () => {
+    todoDiv.remove();
+  });
 }
