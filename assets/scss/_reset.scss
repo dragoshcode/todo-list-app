@@ -36,6 +36,11 @@ button {
   cursor: pointer;
 }
 
-input{
+input {
   border: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.35);
+  }
 }

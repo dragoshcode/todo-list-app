@@ -50,20 +50,18 @@ header {
     padding: 1.6rem 2.3rem;
     justify-content: space-between;
     border-bottom: 1px solid v.$vr-lt-gyish-bl;
+    align-items: center;
   }
 }
 
 .task {
   gap: 1rem;
+  align-items: center;
   button {
     // display: none;
     background: v.$gradient;
     padding: 0.25rem 0.45rem;
     border-radius: 50%;
-
-    img {
-      width: 100%;
-    }
   }
 }
 
@@ -72,6 +70,11 @@ header {
   color: v.$vr-dk-gyish-blue;
   max-width: 20rem;
   line-height: 1.4;
+  margin-top: .3rem;
+}
+
+.delete button img {
+  width: 1.35rem;
 }
 
 .todo__list-info {

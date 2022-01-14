@@ -39,6 +39,10 @@ button {
 input {
   border: none;
 }
+input:focus {
+  outline: none;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.35);
+}
 
 .flex-column {
   display: flex;
@@ -106,18 +110,17 @@ header {
   padding: 1.6rem 2.3rem;
   justify-content: space-between;
   border-bottom: 1px solid #e4e5f1;
+  align-items: center;
 }
 
 .task {
   gap: 1rem;
+  align-items: center;
 }
 .task button {
   background: linear-gradient(#57ddff, #c058f3);
   padding: 0.25rem 0.45rem;
   border-radius: 50%;
-}
-.task button img {
-  width: 100%;
 }
 
 .task li {
@@ -125,6 +128,11 @@ header {
   color: #484b6a;
   max-width: 20rem;
   line-height: 1.4;
+  margin-top: 0.3rem;
+}
+
+.delete button img {
+  width: 1.35rem;
 }
 
 .todo__list-info {
