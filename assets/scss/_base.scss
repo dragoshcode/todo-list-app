@@ -2,7 +2,7 @@
 
 .todo {
   position: absolute;
-  top: 23%;
+  top: 14.5rem;
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 13rem;
@@ -23,7 +23,7 @@
 }
 
 header {
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .todo__title {
@@ -75,8 +75,8 @@ header {
   }
 }
 
-.image-check-button-default{
-    display: none;
+.image-check-button-default {
+  display: none;
 }
 
 .image-check-button {
@@ -115,6 +115,10 @@ header {
 
 .li-completed {
   color: v.$lt-gyish-bl;
+}
+
+.strike-through {
+  text-decoration: line-through;
 }
 
 .delete button img {
@@ -193,8 +197,4 @@ header {
   100% {
     transform: translateY(0.675rem);
   }
-}
-
-.strike-through {
-  text-decoration: line-through;
 }

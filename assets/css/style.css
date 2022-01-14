@@ -65,7 +65,7 @@ input:focus {
 
 .todo {
   position: absolute;
-  top: 23%;
+  top: 14.5rem;
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 13rem;
@@ -78,7 +78,7 @@ input:focus {
 }
 
 header {
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .todo__title {
@@ -168,6 +168,10 @@ header {
   color: #d2d3db;
 }
 
+.strike-through {
+  text-decoration: line-through;
+}
+
 .delete button img {
   width: 1.35rem;
 }
@@ -235,7 +239,4 @@ header {
   100% {
     transform: translateY(0.675rem);
   }
-}
-.strike-through {
-  text-decoration: line-through;
 }

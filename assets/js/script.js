@@ -2,6 +2,7 @@ const todoInput = document.querySelector(".todo-input");
 const todoList = document.querySelector(".todo__list-items");
 const bottomInfo = document.querySelector(".todo__list-info");
 const floatingText = document.querySelector(".floating-text");
+const clearCompletedTasks = document.querySelector(".clear-completed");
 
 todoInput.addEventListener("keypress", (e) => {
   e.key === "Enter" && addTodo();
@@ -78,6 +79,12 @@ function addTodo(e) {
     if (!todoList.hasChildNodes()) {
       bottomInfo.style.display = "none";
       floatingText.style.display = "flex";
+    }
+  });
+
+  clearCompletedTasks.addEventListener("click", () => {
+    if (taskDivLi.classList.contains("strike-through")) {
+      todoDiv.remove();
     }
   });
 }
