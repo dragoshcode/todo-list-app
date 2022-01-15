@@ -63,6 +63,10 @@ input:focus {
   margin-inline: auto;
 }
 
+body {
+  transition: 0.2s;
+}
+
 .todo {
   position: absolute;
   top: 14.5rem;
@@ -126,7 +130,15 @@ header {
   border: 1px solid #d2d3db;
 }
 
+.pointer-events {
+  pointer-events: none;
+}
+
 .image-check-button-default {
+  display: none;
+}
+
+.hidden {
   display: none;
 }
 
@@ -239,4 +251,39 @@ header {
   100% {
     transform: translateY(0.675rem);
   }
+}
+body.dark {
+  background-color: #161722;
+}
+
+body.dark .todo-input {
+  background-color: #25273c;
+  color: #fafafa;
+}
+
+body.dark .floating-text p {
+  color: #fafafa;
+}
+
+body.dark .todo__list-items {
+  background-color: #25273c;
+}
+body.dark .todo__list-items-item {
+  border: 1px solid #393a4c;
+}
+
+body.dark .todo-div {
+  border: 1px solid #393a4c;
+}
+
+body.dark .task li {
+  color: #fafafa !important;
+}
+
+body.dark .data {
+  background-color: #25273c;
+}
+
+body.dark .buttons {
+  background-color: #25273c;
 }

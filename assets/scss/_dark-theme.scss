@@ -1,1 +1,39 @@
 @use "variables" as v;
+
+body.dark {
+  background-color: v.$dark-vr-dk-bl;
+}
+
+body.dark .todo-input {
+  background-color: v.$dark-vr-dk-ds-bl;
+  color: v.$vr-lt-gy;
+}
+
+body.dark .floating-text p {
+  color: v.$vr-lt-gy;
+}
+
+body.dark .todo__list-items {
+  background-color: v.$dark-vr-dk-ds-bl;
+
+  &-item {
+    border: 1px solid v.$dark-vr-dk-gyish-bl;
+  }
+}
+
+body.dark .todo-div {
+  border: 1px solid v.$dark-vr-dk-gyish-bl;
+}
+
+body.dark .task li {
+  color: v.$vr-lt-gy !important;
+}
+
+body.dark .data{
+    background-color: v.$dark-vr-dk-ds-bl
+}
+
+body.dark .buttons{
+    background-color: v.$dark-vr-dk-ds-bl
+}
+

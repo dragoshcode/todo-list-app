@@ -1,5 +1,9 @@
 @use "variables" as v;
 
+body{
+    transition: .2s;
+}
+
 .todo {
   position: absolute;
   top: 14.5rem;
@@ -75,8 +79,16 @@ header {
   }
 }
 
+.pointer-events{
+    pointer-events: none;
+}
+
 .image-check-button-default {
   display: none;
+}
+
+.hidden{
+    display: none;
 }
 
 .image-check-button {

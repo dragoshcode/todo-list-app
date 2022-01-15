@@ -3,6 +3,13 @@ const todoList = document.querySelector(".todo__list-items");
 const bottomInfo = document.querySelector(".todo__list-info");
 const floatingText = document.querySelector(".floating-text");
 const clearCompletedTasks = document.querySelector(".clear-completed");
+const allItems = document.querySelector(".all");
+const activeItems = document.querySelector(".active");
+const completedItems = document.querySelector(".completed");
+const themeChanger = document.querySelector(".theme-changer");
+const themeChangerIcon = document.querySelector(".theme-changer-img");
+const body = document.querySelector("body");
+const bgImg = document.querySelector(".background-img");
 
 todoInput.addEventListener("keypress", (e) => {
   e.key === "Enter" && addTodo();
@@ -29,7 +36,7 @@ function addTodo(e) {
       taskDivButton.appendChild(taskDivButtonImage);
       taskDivButtonImage.src = "./assets/images/icon-check.svg";
       taskDivButtonImage.alt = "task completed";
-
+      taskDivButton.classList.add("pointer-events");
       taskDivButtonImage.classList.toggle("gradient-bg-btn");
 
       taskDivButton.classList.toggle("task-button");
@@ -88,3 +95,18 @@ function addTodo(e) {
     }
   });
 }
+
+themeChanger.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  if (body.classList.contains("dark")) {
+    themeChangerIcon.src = "./assets/images/icon-sun.svg";
+    bgImg.src = "./assets/images/bg-mobile-dark.jpg";
+    bgImg.srcset =
+      "./assets/images/bg-mobile-dark.jpg 500w, ./assets/images/bg-desktop-dark.jpg 1920w";
+  } else {
+    themeChangerIcon.src = "./assets/images/icon-moon.svg";
+    bgImg.src = "./assets/images/bg-mobile-light.jpg";
+    bgImg.srcset =
+      "./assets/images/bg-mobile-light.jpg 500w, ./assets/images/bg-desktop-light.jpg 1920w";
+  }
+});
