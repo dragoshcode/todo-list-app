@@ -1,7 +1,7 @@
 @use "variables" as v;
 
-body{
-    transition: .2s;
+body {
+  transition: 0.2s;
 }
 
 .todo {
@@ -79,16 +79,16 @@ header {
   }
 }
 
-.pointer-events{
-    pointer-events: none;
+.pointer-events {
+  pointer-events: none;
 }
 
 .image-check-button-default {
   display: none;
 }
 
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
 
 .image-check-button {
@@ -167,6 +167,11 @@ header {
       color: v.$dk-gyish-bl;
       font-family: "Josefin Sans", sans-serif;
       font-size: 1.25rem;
+      transition: 0.2s;
+
+      &:hover {
+        color: v.$lt-gyish-bl;
+      }
     }
   }
 
@@ -184,6 +189,11 @@ header {
       font-family: "Josefin Sans", sans-serif;
       font-size: 1.3rem;
       font-weight: 700;
+      transition: 0.2s;
+
+      &:hover {
+        color: v.$lt-gyish-bl;
+      }
     }
   }
 }

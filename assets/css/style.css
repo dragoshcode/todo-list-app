@@ -214,6 +214,10 @@ header {
   color: #9394a5;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.25rem;
+  transition: 0.2s;
+}
+.todo__list-info .data button:hover {
+  color: #d2d3db;
 }
 .todo__list-info .buttons {
   grid-area: state;
@@ -229,6 +233,10 @@ header {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
+  transition: 0.2s;
+}
+.todo__list-info .buttons button:hover {
+  color: #d2d3db;
 }
 
 .floating-text {
@@ -286,4 +294,23 @@ body.dark .data {
 
 body.dark .buttons {
   background-color: #25273c;
+}
+
+@media only screen and (min-width: 720px) {
+  .background img {
+    height: 28rem;
+  }
+}
+@media only screen and (min-width: 820px) {
+  .todo {
+    max-width: 60rem;
+  }
+  .todo__title h1 {
+    font-size: 3.35rem;
+  }
+}
+@media only screen and (min-width: 1360px) {
+  .background img {
+    height: 36rem;
+  }
 }

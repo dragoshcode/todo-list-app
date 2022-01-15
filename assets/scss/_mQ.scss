@@ -1,1 +1,23 @@
 @use "variables" as v;
+
+@media only screen and (min-width: 720px) {
+  .background img {
+    height: 28rem;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .todo {
+    max-width: 60rem;
+
+    &__title h1 {
+      font-size: 3.35rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .background img {
+    height: 36rem;
+  }
+}
